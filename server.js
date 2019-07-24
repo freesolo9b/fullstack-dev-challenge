@@ -1,4 +1,5 @@
 const express = require('express');
+const interestCalculator = require('./scripts/interestCalculator');
 
 const app = express();
 app.set('port', (process.env.PORT || 3001));
@@ -15,6 +16,8 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   app.use(allowCrossDomain);
 }
+
+app.use('/interestCalculator', interestCalculator);
 
 app.listen(app.get('port'), () => {
   console.log(`Find the server at: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
