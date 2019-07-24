@@ -54,3 +54,8 @@ p {
 	margin-bottom: 4px;
 	margin-top: 12px;
 }
+
+.chart-label {
+		text-align: center;
+		font-size: 24px;
+}

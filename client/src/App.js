@@ -99,8 +99,14 @@ const App = () => {
           defaultValue={frequency}
           onChange={handleInputChange('frequency')}
         />
+
       </div>
       <div className="financial-display">
+        {chartData[chartData.length - 1] ? (
+          <p className="chart-label">
+            {`After ${years} years you will have saved £${chartData[chartData.length - 1].amount.toFixed(2)}`}
+          </p>
+        ) : ''}
         <DisplayGraph data={chartData} />
       </div>
     </div>
