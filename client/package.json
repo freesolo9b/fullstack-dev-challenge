@@ -3,9 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "victory": "^0.21.0"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-flowtype": "^3.12.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "7.14.2",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.103.0",
+    "global": "^4.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "victory": "^32.3.3"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"
