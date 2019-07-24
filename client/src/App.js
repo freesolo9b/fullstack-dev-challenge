@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CurrencyInput from './components/CurrencyInput';
 import SliderInput from './components/SliderInput';
+import FrequencyInput from './components/FrequencyInput';
 import DisplayGraph from './components/DisplayGraph';
 import './App.css';
 
@@ -22,6 +23,12 @@ const App = () => {
         break;
       case 'interestRate':
         setInterestRate(value / 100);
+        break;
+      case 'years':
+        setYears(value);
+        break;
+      case 'frequency':
+        setFrequency(value);
         break;
       default:
     }
@@ -55,19 +62,19 @@ const App = () => {
   },
   [initialSavings, monthlyDeposit, interestRate, years, frequency]);
 
-    return (
-      <div className="App">
-        <div className="header-banner">
-          <h1 className="fmz-white-font">Finimize Interest Rate Calculator</h1>
-        </div>
-				<div className="financial-inputs">
-					<p className="input-label">How much have you saved?</p>
+  return (
+    <div className="App">
+      <div className="header-banner">
+        <h1 className="fmz-white-font">Finimize Interest Rate Calculator</h1>
+      </div>
+      <div className="financial-inputs">
+        <p className="input-label">How much have you saved?</p>
         <CurrencyInput defaultValue={initialSavings} onChange={handleInputChange('initialSavings')} />
 
-					<p className="input-label">How much will you save each month?</p>
+        <p className="input-label">How much will you save each month?</p>
         <CurrencyInput defaultValue={monthlyDeposit} onChange={handleInputChange('monthlyDeposit')} />
 
-					<p className="input-label">How much interest will you earn per year?</p>
+        <p className="input-label">How much interest will you earn per year?</p>
         <SliderInput
           defaultValue={interestRate * 100}
           valueLabel="%"
@@ -77,13 +84,27 @@ const App = () => {
           onChange={handleInputChange('interestRate')}
         />
 
+        <p className="input-label">How many years will you invest for?</p>
+        <SliderInput
+          defaultValue={years}
+          valueLabel=" years"
+          min={0}
+          max={80}
+          step={1}
+          onChange={handleInputChange('years')}
+        />
 
-				</div>
-				<div className="financial-display">
-        <DisplayGraph data={chartData} />
-				</div>
+        <p className="input-label">How often will your interest be calculated?</p>
+        <FrequencyInput
+          defaultValue={frequency}
+          onChange={handleInputChange('frequency')}
+        />
       </div>
-    );
+      <div className="financial-display">
+        <DisplayGraph data={chartData} />
+      </div>
+    </div>
+  );
 };
 
 export default App;

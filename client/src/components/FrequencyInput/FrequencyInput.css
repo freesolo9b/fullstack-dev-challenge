@@ -1,0 +1,15 @@
+.frequency-input td {
+    padding: 6px;
+    margin-right: 2px;
+    font-size: 15px;
+    display: inline-block;
+    border: 2px solid #AAB8C8;
+    border-radius: 8px;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.frequency-input td.checked {
+    color: #00b2ff;
+}
