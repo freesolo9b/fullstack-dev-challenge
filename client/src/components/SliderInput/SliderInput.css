@@ -1,0 +1,17 @@
+.fmz-slider {
+	display: flex;
+	color: #00b2ff
+}
+
+.fmz-slider.changed {
+	color: #000
+}
+
+.fmz-slider input {
+	width: 200px;
+}
+
+.fmz-slider span {
+	margin: 4px;
+	flex-grow: 1;
+}
