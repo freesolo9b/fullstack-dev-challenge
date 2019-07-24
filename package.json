@@ -5,14 +5,23 @@
   "dependencies": {
     "babel-cli": "6.14.0",
     "babel-core": "6.14.0",
+    "babel-eslint": "^10.0.2",
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-mocha": "^6.0.0",
+    "eslint-plugin-node": "^9.1.0",
     "express": "4.13.3",
-    "mocha": "^3.4.2"
+    "global": "^4.4.0",
+    "mocha": "^6.2.0"
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "install": "cd client && yarn install && cd .."
+    "install": "cd client && yarn install && cd ..",
+    "test": "mocha"
   },
   "devDependencies": {
     "concurrently": "3.1.0"
